@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Baby 💗</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #ffeef5);
+    text-align: center;
+    color: #5a2940;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 25px 18px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page.active {
+    display: flex;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.photo {
+    width: 80%;
+    max-width: 300px;
+    max-height: 330px;
+    object-fit: contain;
+    border-radius: 20px;
+    margin: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+button {
+    border: none;
+    background: #ff6f9f;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.heart {
+    font-size: 45px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <div class="heart">💗</div>
+
+    <h1>Hi Bengg! 🥰</h1>
+
+    <p>
+        Ginawa ko po itong little website para sa'yo, babyy. 💕
+    </p>
+
+    <p>
+        Sana magustuhan mo po ito kahit simple lang.
+        I made this just for you. 🥹❤️
+    </p>
+
+    <button onclick="nextPage()">Next 💕</button>
+</div>
+
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+
+    <h1>For You, Babyy 💗</h1>
+
+    <img class="photo" src="1783947964106.jpg" alt="Our picture">
+
+</>
+    <p>
+        babyy i just want to sayy po na thankyouu po sa lahatt babyy, thankyouy po kasii inaalagaan mopo ako at minamahal babyykoo
+    </p>
+
+    <p>
+        babyyy, lagii mopong tatandaan na mahalll na mahalll poo kitaa babyykoo 
+    </p>
+
+    <p>
+        Iloveyouusoomuucccccchhhhh babyyykoo 😚💋❤️
+    </p>
+
+    <button onclick="nextPage()">Next 💕</button>
+</div>
+
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+
+    <h1>Our Memories 📸💗</h1>
+
+    <img class="photo" src="IMG_20260712_163138_937.webp" alt="Our second picture">
+
+  </>
+    <p>
+      babyy sobrangg sayaa kopoo kasii nakilalaa kitaa babyykoo, sanaa po hindii na ikaww mawala sakin babyykoo
+    </p>
+    <img class="photo" src="photo1.jpg" alt="Our third picture">
+  </>
+    <p>
+      babyy sanaa po maging successfull tayo sa buhayy at sanaa po tanggap ako ng familyy mo babyy, and sanaa po tayoo napo hanggang hulii babyykoo
+    </p>
+    <button onclick="nextPage()">Next 💕</button>
+</div>
+
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+
+    <h1>My Message For You 💌</h1>
+
+    <img class="photo" src="photo2.jpg" alt="Our last picture">
+
+    <p>
+        mahall na mahalll kitaa babyykoo, sanaa poo wagg ikaw mapagod mahalin at alagaan ako be:(
+    </p>
+
+    <p>
+        And babyy, hindi na po us pwedeng mag
+        pancit canton / coke / chichirya babyy ha.
+    </p>
+
+    <p>
+        Iloveyouusoomuchhhhh babyyykoo 😚💋❤️
+    </p>
+
+    <div class="heart">❤️</div>
+</div>
+
+
+<script>
+let currentPage = 1;
+
+function nextPage() {
+    document.getElementById("page" + currentPage).classList.remove("active");
+
+    currentPage++;
+
+    if (currentPage > 4) {
+        currentPage = 1;
+    }
+
+    document.getElementById("page" + currentPage).classList.add("active");
+
+    window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
